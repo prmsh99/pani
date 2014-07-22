@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pani</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Welcome to Panimutlu.com</title>
+
+<link rel="shortcut icon" href="http://www.panimutlu.com/images/favicon.ico">
+<link rel="large icon" href="http://www.panimutlu.com/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="http://www.panimutlu.com/images/favicon.ico" type="image/x-icon">
+
+<link href="Welcome%20to%20Panimutlu.com_files/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="header-wrapper">
+<div class="header-main">
+        <div class="logo">
+        <table border="0" cellpadding="0" cellspacing="0" width="0">
+              <tbody> <%= link_to image_tag("logo.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+            </tbody></table>
+      </div>
+        <div class="header-right">
+            <table border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+            <!-- <td style="background:url(images/header-style-bg.png) repeat-y;" align="center" valign="middle" width="220"><img src="Welcome%20to%20Panimutlu.com_files/social-icons.png" alt="social" usemap="#Map" border="0"></td> -->
+            <td style="background:url(images/header-style-bg.png) repeat-y;" align="center" valign="middle" width="220"><%= link_to image_tag("social-icons.png", alt: "Rails"), '#' %>
+           <!--  <td style="background:url(images/header-style-bg.png) repeat-y;" align="center" valign="middle" width="220"><img src="Welcome%20to%20Panimutlu.com_files/contact-img.png" alt="Phone"></td> -->
+           <td style="background:url(images/header-style-bg.png) repeat-y;" align="center" valign="middle" width="220"><%= link_to image_tag("contact-img.png", alt: "Rails"), '#' %>
+            <td style="background:url(images/header-style-bg.png) repeat-y;" align="right" height="60" valign="middle" width="220"><a href="/static_pages/home" class="login-btn">Login</a><a href="#" class="register-btn">Register</a></td>
+            </tr>
+            <tr>
+            <td colspan="3" height="65">
+                <div class="main-nav">
+          <ul id="menu">
+                    <li><a href="http://localhost:3000/static_pages/jobs" style="margin-right:15px;">Home</a></li>
+                    <li><a href="http://localhost:3000/static_pages/jobs" class="active" style="margin-right:15px;">Jobs</a></li>
+                    <li><a href="http://localhost:3000/static_pages/training" style="margin-right:15px;">Training</a></li>
+                    <li><a href="http://localhost:3000/static_pages/csr" style="margin-right:15px;">CSR</a></li>
+                    <li><a href="http://localhost:3000/static_pages/about">About</a>
+                        <ul>
+                            <li><a href="http://localhost:3000/static_pages/company">Company</a></li>
+                            <li><a href="http://localhost:3000/static_pages/team">Team</a></li>
+                            <li><a href="http://localhost:3000/static_pages/careers">Careers</a></li>
+                            <li><a href="http://localhost:3000/static_pages/faq">FAQ's</a></li>
+                            <li><a href="http://localhost:3000/static_pages/contact">Contact</a></li>
+                      </ul>
+              </li>
+                 </ul>
+              </div>
+            </td>
+            </tr>
+            </tbody></table>
+    </div>
+  </div>
+</div>
+<%= yield %>
+
+<div class="footer-wrapper">
+    <div class="footer-main">
+        <div class="footer-left">
+            <a href="http://panimutlu.com/index.html">Home</a>
+            <a href="http://panimutlu.com/about.html">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-right">
+            Copyright © 2014 Panimutlu.com All Rights Reserved.
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
