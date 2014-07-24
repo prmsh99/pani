@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+
+      resources :users
+      resources :jobs
+       resources :sessions, only: [:new, :create, :destroy]
+       resources :jobregistrations
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -7,12 +13,20 @@ Rails.application.routes.draw do
 
   get 'static_pages/csr'
 
+    get '/signout', to: 'sessions#destroy',     via: 'delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+ match '/signup',  to: 'users#new',            via: 'get'
+   match '/signin',  to: 'sessions#new',         via: 'get'
+   match '/signin',  to: 'sessions#new',         via: 'get'
+   
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#jobs'
+  root 'static_pages#home'
 match ':controller(/:action(/:id))',:via => :get
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

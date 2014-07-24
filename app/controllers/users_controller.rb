@@ -6,14 +6,50 @@ end
 
 def create
  @user = User.new(user_params)
+
+ # binding.pry
+ if simple_captcha_valid?
+      p "entered"
     if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+        flash[:notice] = "You have successfully registered "
+          redirect_to signin_path
+
+        else
+               render 'new'
+      end
     else
+      p "captcha failed"
+        flash[:notice] = "captcha did not match"
       render 'new'
     end
+end
+
+def show
+    @user=User.find(params[:id])
   end
+
+
+
+
+
+
+private
+
+
+    def user_params
+      params.require(:user).permit(:name, :email, :password,
+                                   :password_confirmation,:phone,:address,:state,:dist,:citytown,:mandal,:birth)
+    end
+    # Before filters
+
+    def signed_in_user
+
+    end
+
+    def correct_user
+
+    end
+
 
 
 end

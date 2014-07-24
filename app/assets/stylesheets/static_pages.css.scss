@@ -460,3 +460,141 @@ img, a img {
     font-size:11px;
     color:#666;
 }
+
+.login-main {
+background-image: image-url('login-bg.png');
+    width:338px;
+    height:391px;
+    position:absolute;
+    left:50%;
+    margin-left:-169px;
+    top:210px;
+    z-index:9;
+}
+.login-b1 {
+    width:170px;
+    height:30px;
+    float:left;
+    margin:40px 0px 15px 115px;
+}
+.login-b2 {
+    width:170px;
+    height:30px;
+    float:left;
+    margin:15px 0px 10px 115px;
+}
+.login-b3 {
+    width:300px;
+    height:30px;
+    float:left;
+    margin:15px 0px 5px 20px;
+    text-align:center;
+}
+.login-b3 a {
+    color:#535c67;
+    text-decoration:none;
+}
+.login-b3 a:hover {
+    text-decoration:underline;
+}
+.login-b4 {
+    width:260px;
+    height:40px;
+    float:left;
+    margin:10px 0px 25px 40px;
+}
+.login-b4 btn-style2 {
+    display:block;
+    float:left;
+    text-align:center;
+    background:#F00;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    color:#FFF;
+    font-size:17px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.login-b4 btn-style2:hover {
+    background:#000;
+}
+.login-b5 {
+    width:310px;
+    height:30px;
+    float:left;
+    margin:5px 0px 0px 14px;
+    text-align:center;
+}
+.login-b5 a {
+    color:#000;
+    text-decoration:none;
+    font-size:14px;
+    text-decoration:underline;
+}
+.login-b5 a:hover {
+    color:#069;
+}
+.form-style {
+    width:170px;
+    height:30px;
+    background:none;
+    border:0px;
+    outline:none;
+    font-size:12px;
+    color:#7a7a7a;
+}
+.register-main{background-image: image-url('register-bg.png');
+width:708px;
+height:435px;
+margin:30px auto;
+}
+
+.register-cnt{width:auto;
+height:auto;
+float:left;
+margin:120px 0px 0px 20px;
+}
+
+.register-cnt td{color:#494949;
+font-size:14px;
+padding:14px 5px;
+}
+
+.register-cnt2 td{color:#494949;
+font-size:14px;
+padding:0px 5px;
+}
+
+.form-style2{width:170px;
+height:28px;
+border:#c3c3c3 1px solid;
+padding:0px 5px;
+font-size:12px;
+color:#666;
+}
+
+.form-style3{width:auto;
+border:#c3c3c3 1px solid;
+padding:0px 5px;
+font-size:12px;
+color:#666;
+padding:3px 5px 3px 3px;
+}
+
+.btn-style2{width:200px;
+height:35px;
+color:#FFF;
+font-size:15px;
+line-height:35px;
+text-align:center;
+background:#F00;
+font-weight:bold;
+border:none;
+cursor:pointer;
+}
+
+.btn-style2:hover{background:#000;
+}
+

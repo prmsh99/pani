@@ -1,22 +1,28 @@
 
-<div class="content-wrapper" style="background:url(images/login-main-bg.jpg) no-repeat top center; height:470px; margin-top:10px;">
+<div class="content-wrapper" style="background:url(/assets/login-main-bg.jpg) no-repeat top center; height:470px; margin-top:10px;">
     <div class="login-main">
     <div class="login-b1">
-      <input name="email" type="text" class="form-style" onfocus="if(this.value==this.defaultValue)this.value=''"
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+      <input name="session[email]" type="text" class="form-style" onfocus="if(this.value==this.defaultValue)this.value=''"
                 onblur="if(this.value=='')this.value=this.defaultValue" value="Email ID" />
     </div>
     <div class="login-b2">
-        <input name="Password" type="password" class="form-style" onfocus="if(this.value==this.defaultValue)this.value=''"
+
+
+        <input name="session[password]" type="password" class="form-style" onfocus="if(this.value==this.defaultValue)this.value=''"
                 onblur="if(this.value=='')this.value=this.defaultValue" value="Password" id="Password" />
     </div>
     <div class="login-b3">
         <a href="#">Forgot Your Password?</a>
     </div>
     <div class="login-b4">
-        <a href="#">Sign In</a>
+        <input name="button" type="submit" class="btn-style2" id="button" value="SignIn" />
     </div>
+<% end %>
     <div class="login-b5">
-        <a href="#">Create an account</a>
+        <a href="/signup">Create an account</a>
     </div>
 </div>
 </div>

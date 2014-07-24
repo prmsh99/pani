@@ -1,56 +1,91 @@
-<div class="content-wrapper" style="background:url(images/register-bg.jpg) no-repeat; height:520px;">
+<div class="content-wrapper" style="background:url(/assets/register-bg.jpg) no-repeat; height:520px;">
     <div class="register-main">
         <div class="register-cnt">
-          <table width="670" border="0" cellspacing="0" cellpadding="0">
+<%= form_for (@user) do |f| %>
+<%= render 'errormessages/error_messages', object: f.object %>
+          <table width="640" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td align="right">Name : </td>
     <td><label>
-      <input name="textfield" type="text" class="form-style2" id="textfield" />
+      <input name="user[name]" type="text" class="form-style2" id="textfield" />
     </label></td>
     <td align="right">Email : </td>
-    <td><input name="textfield2" type="text" class="form-style2" id="textfield2" /></td>
+    <td><input name="user[email]" type="text" class="form-style2" id="textfield2" /></td>
   </tr>
   <tr>
-    <td align="right">Password :</td>
-    <td><input name="textfield3" type="password" class="form-style2" id="textfield3" /></td>
+    <td align="right">Password:</td>
+    <td><input name="user[password]" type="password" class="form-style2" id="textfield3" /></td>
     <td align="right">Re-Password :</td>
-    <td><input name="textfield4" type="password" class="form-style2" id="textfield4" /></td>
+    <td><input name="user[password_confirmation]" type="password" class="form-style2" id="textfield4" /></td>
   </tr>
-  <tr>
-    <td align="right">Date of Birth : </td>
+
+   <!--  <td align="right">Date of Birth : </td>
     <td><label>
-      <select name="select" class="form-style3" id="select">
+      <select name="users[select]" class="form-style3" id="select">
         <option>01</option>
       </select>
       <select name="select2" class="form-style3" id="select2">
-        <option>01</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+          <option>October</option>
+            <option>November</option>
+              <option>December</option>
+
+
       </select>
       <select name="select3" class="form-style3" id="select3">
         <option>2014</option>
       </select>
-    </label></td>
+    </label></td> -->
+      <tr>
     <td align="right">Phone : </td>
-    <td><input name="textfield6" type="text" class="form-style2" id="textfield6" /></td>
+    <td><input name="user[phone]" type="text" class="form-style2" id="textfield6" /></td>
+    <td align="right">Dateofbirth : </td>
+    <td><input name="user[birth]" type="text" class="form-style2" id="textfield6"  placeholder="dd/mm/yyyy" /></td>
+  </tr>
+  <tr>
+  <td align="right">Gender : </td>
+<td><input type="radio" name="sex" value="male">Male</td>
+<td><input type="radio" name="sex" value="female">Female</td>
   </tr>
   <tr>
     <td align="right">Address : </td>
     <td colspan="3"><table width="450" class="register-cnt2" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="92"><input name="textfield7" style="width:80px;" type="text" class="form-style2" id="textfield7" /></td>
-        <td width="77"><select name="select4" class="form-style3" id="select4">
+        <td width="92"><input name="user[address]" style="width:80px;" type="text" class="form-style2" id="textfield7" /></td>
+        <td width="77"><select name="user[state]" class="form-style3" id="select4">
           <option>State</option>
+            <option>Andhra Pradesh</option>
         </select></td>
-        <td width="67"><select name="select5" class="form-style3" id="select5">
+        <td width="67"><select name="user[dist]" class="form-style3" id="select5">
           <option>Dist</option>
+            <option>Andhra Pradesh</option>
         </select></td>
-        <td width="108"><select name="select6" class="form-style3" id="select6">
+        <td width="108"><select name="user[citytown]" class="form-style3" id="select6">
           <option>City/ Town</option>
+            <option>Andhra Pradesh</option>
         </select></td>
-        <td width="206"><select name="select7" class="form-style3" id="select7">
+        <td width="206"><select name="user[mandal]" class="form-style3" id="select7">
           <option>Mandal</option>
+            <option>Andhra Pradesh</option>
         </select></td>
       </tr>
     </table></td>
+    </tr>
+    <tr>
+    <td colspan="4" align="center" valign="middle"><label>
+
+  <%= show_simple_captcha %>
+  <%# binding.pry %>
+
+    </label></td>
     </tr>
   <tr>
     <td colspan="4" align="center" valign="middle"><label>
@@ -58,6 +93,6 @@
     </label></td>
     </tr>
 </table>
-
+<% end %>
       </div>
   </div>

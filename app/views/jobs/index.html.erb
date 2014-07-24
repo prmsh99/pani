@@ -1,0 +1,31 @@
+<h1>Listing Jobs</h1>
+<%= link_to 'Future Jobs', users_path %>
+<table>
+ <thead>
+   <tr>
+     <th>Job Title</th>
+     <th>Job Description</th>
+     <th>Compnay Name</th>
+     <th>Valid Date</th>
+     <th colspan="3"></th>
+
+   </tr>
+ </thead>
+
+ <tbody>
+   <% @jobs.each do |j| %>
+     <tr>
+       <td><%= j.title %></td>
+       <td><%= j.desc %></td>
+       <td><%= j.name %></td>
+       <td><%= j.validdate %></td>
+       <td><%= link_to 'Apply Now', users_path %></td>
+
+     </tr>
+   <% end %>
+ </tbody>
+</table>
+
+
+
+
